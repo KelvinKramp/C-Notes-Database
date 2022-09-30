@@ -5,7 +5,7 @@ Commong addressed advantages:
 - Hiding data layer complexity.
 - Easy for UI/Unit testing by mocking DTOs and injecting as dependency.
 - No more direct dealing with faulty data or errors related to network or database.
-- Security: Your API should never return or receive domain objects. Receiving domain objects creates security treats. ![image](https://user-images.githubusercontent.com/76985447/193202963-f6e4bf55-957f-45a1-8b47-75be23820929.png)
+- Security: Your API should never return or receive domain objects. Receiving domain objects creates security treats.
 
 (Source https://medium.com/@ParthContractor/dto-data-transfer-objects-3848a45a6d6)
 
@@ -40,10 +40,8 @@ The unit of work class coordinates the work of multiple repositories by creating
 
 ## DbSet
 Each DbSet has a collection like interface (add, remove, find, where).
-![image](https://user-images.githubusercontent.com/76985447/193212722-8c463892-abb1-4f03-87a1-2e75304c41a5.png)
 
 ## Persistence framewqork
 A persistence framework is middleware that assists in the storage and retrieval of information between applications and databases, especially relational databases. It acts as a layer of abstraction for persisted data, bridging conceptual and technical differences between storage and utilisation.
 (wikipedia)
-![image](https://user-images.githubusercontent.com/76985447/193212823-5525d20e-692c-4a61-80dc-03a36305194d.png)
 
