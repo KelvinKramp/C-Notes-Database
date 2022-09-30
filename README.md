@@ -1,4 +1,4 @@
-# C-Notes-Database
+# Csharp notes about databases
 
 ## DTO (Data layer objects)
 Commong addressed advantages: 
