@@ -86,6 +86,7 @@ Generic implementations reduces code but still requires to create implementation
  <img width="372" alt="image" src="https://user-images.githubusercontent.com/76985447/193221941-7fd5dbc0-f3e3-4184-8886-ba9617ed9c78.png">
 
 Solution is to create a baseEntitiy called Entity where every business object inherits from. 
+ 
 Example in code (in this example guid ids are created by the baseentity):  
  ### BusinessObjectX.cs
  ```
