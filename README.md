@@ -28,7 +28,9 @@ The unit of work class coordinates the work of multiple repositories by creating
 
 ### Martin Fowler (writer of Patterns of Enterprise Application Architecture)
 "DTOs are called Data Transfer Objects because their whole purpose is to shift data in expensive remote calls. They are part of implementing a coarse grained interface which a remote interface needs for performance. "
+
 "One case where it is useful to use something like a DTO is when you have a significant mismatch between the model in your presentation layer and the underlying domain model. In this case it makes sense to make presentation specific facade/gateway that maps from the domain model and presents an interface that's convenient for the presentation. It fits in nicely with Presentation Model. I hope to talk about this more in the new volume. This is worth doing, but it's only worth doing for screens that have this mismatch (in this case it isn't extra work, since you'd have to do it in the screen anyway.)"
+
 (Source https://martinfowler.com/bliki/LocalDTO.html)
 
 ### Unit of work pattern is used in practice to:
