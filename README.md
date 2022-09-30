@@ -37,6 +37,7 @@ The unit of work class coordinates the work of multiple repositories by creating
 In short, the unit of work mantains a list of businesstransactions and coordinates the writing out of changes. Unit of work contains the class DbContext with classes and methods such as DbSets, SaveChanges, etc. These classes and methods are directly related to the database; they perform work by executing database operations dependent on the underlying database used. 
 
 One user has one DbContext per session. The database work is collected in a unit of work. When SaveChanges or similar method is called all tracked changes during that session of this user are implemented in the database:
+
  <img width="331" alt="image" src="https://user-images.githubusercontent.com/76985447/193211738-5c20e9a1-075a-4cd2-bb70-22c1fc1f7be9.png">
 (Source Repository Pattern with C# and Entity Framework, Done Right | Mosh https://www.youtube.com/watch?v=rtXpYpZdOzM&t=12s)
 
