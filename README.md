@@ -53,6 +53,7 @@ IBusinessObjectX inherits from IRepostiory. Throught the implementation of gener
 
 E.g.:
 ### IBusinessObjectX.cs
+ ```
 namespace MoneyMakingBusiness.Domain.AggregatesModel
 {
     public interface IBusinessObjectXRepository: IRepository<BusinessObjectX>
@@ -60,8 +61,10 @@ namespace MoneyMakingBusiness.Domain.AggregatesModel
 
     }
 }
+ ```
  
 ### IRepository.cs
+ ```
 namespace Shared.Infrastructure.Database
 {
     public interface IRepository<T> 
@@ -72,8 +75,10 @@ namespace Shared.Infrastructure.Database
         T Get(Guid entityId);
         void Remove(T entity);
     }
+ }
 
-
+```
+ 
  <img width="386" alt="image" src="https://user-images.githubusercontent.com/76985447/193221914-a923a0c6-8465-4481-a67c-f1a7992e57dd.png">
 
 Generic implementations reduces code but still requires to create implementation per business object. 
@@ -82,6 +87,7 @@ Generic implementations reduces code but still requires to create implementation
 Solution is to create a baseEntitiy called Entity where every business object inherits from. 
  E.g. 
  ### BusinessObjectX.cs
+ ```
 namespace MoneyMakingBusiness.Domain.AggregatesModel
 {
     public interface BusinessObjectXRepository: Entity
@@ -89,8 +95,10 @@ namespace MoneyMakingBusiness.Domain.AggregatesModel
 
     }
 }
+ ```
  
  ### Entity.cs
+ ```
  namespace Shared.Infrastructure.Database
 {
 {
@@ -104,7 +112,7 @@ namespace MoneyMakingBusiness.Domain.AggregatesModel
         }
     }
 }
- 
+ ```
  
 <img width="378" alt="image" src="https://user-images.githubusercontent.com/76985447/193221968-ac38c634-5906-4961-8906-1597ab37679c.png">
 (Source https://www.youtube.com/watch?v=x6C20zhZHw8)
