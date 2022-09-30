@@ -93,7 +93,14 @@ namespace MoneyMakingBusiness.Domain.AggregatesModel
 {
     public interface BusinessObjectXRepository: Entity
     {
+         public BusinessObjectXRepository(string category, int priority)
+        {
+            Category = category;
+            Priority = priority;
+        }
+        public string Category { get; set; }
 
+        public int Priority { get; set; }
     }
 }
  ```
