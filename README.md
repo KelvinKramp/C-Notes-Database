@@ -51,7 +51,7 @@ A persistence framework is middleware that assists in the storage and retrieval 
 # Generic implementations in repository pattern
 IBusinessObjectX inherits from IRepostiory. Throught the implementation of generics <T> in the IRepository interface code repetition is prevented. As a consequence the IBusinessObjectXRepository interfaces are mostly empty because they inherit the CRUD operations from IRepository<T>.  
 
-E.g.:
+Example in code:
 ### IBusinessObjectX.cs
  ```
 namespace MoneyMakingBusiness.Domain.AggregatesModel
@@ -79,13 +79,14 @@ namespace Shared.Infrastructure.Database
 
 ```
  
+ Example in diagram:  
  <img width="386" alt="image" src="https://user-images.githubusercontent.com/76985447/193221914-a923a0c6-8465-4481-a67c-f1a7992e57dd.png">
 
 Generic implementations reduces code but still requires to create implementation per business object. 
  <img width="372" alt="image" src="https://user-images.githubusercontent.com/76985447/193221941-7fd5dbc0-f3e3-4184-8886-ba9617ed9c78.png">
 
 Solution is to create a baseEntitiy called Entity where every business object inherits from. 
- E.g. 
+Example in code:  
  ### BusinessObjectX.cs
  ```
 namespace MoneyMakingBusiness.Domain.AggregatesModel
@@ -114,6 +115,7 @@ namespace MoneyMakingBusiness.Domain.AggregatesModel
 }
  ```
  
+Example in diagram:  
 <img width="378" alt="image" src="https://user-images.githubusercontent.com/76985447/193221968-ac38c634-5906-4961-8906-1597ab37679c.png">
 (Source https://www.youtube.com/watch?v=x6C20zhZHw8)
  
