@@ -1,6 +1,6 @@
 # Csharp notes about databases
 
-## DTO (Data layer objects)
+## DTO (Data Transfer Objects)
 Commong addressed advantages: 
 - Hiding data layer complexity.
 - Easy for UI/Unit testing by mocking DTOs and injecting as dependency.
